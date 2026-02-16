@@ -1,0 +1,7 @@
+-
+  name: first_playbook
+  hosts: vm1
+  tasks:
+    -
+      name: "copy module"
+      copy: src=README.md dest=/tmp
