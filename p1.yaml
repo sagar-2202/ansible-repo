@@ -1,0 +1,10 @@
+-
+  name: first_playbook
+  hosts: vm1
+  tasks:
+    -
+      name: "creating a file in /tmp directory"
+      command: touch /tmp/x.txt
+    -
+      name: "appending content into x.txt"
+      command: echo "performed in 2nd task" > /tmp/x.txt
