@@ -1,0 +1,10 @@
+# role is used like terraform modules. you call the role here, role has directories built seperately 
+# for variables and tasks and many more.
+
+-
+  name: role playbook
+  hosts: vm1
+  become: yes
+  roles:
+    - m1
+    - m2

@@ -1,0 +1,28 @@
+# Purpose: To keep the connection alive in case of timeouts.
+# If we specify the time as async: 60, it'll keep the connection till 60 seconds.
+# And poll is used as intervals, async: 60 and poll: 30, so it'll check in 30 seconds.
+# (#1 will fail) and (#2 will pass)
+
+# 1.
+# -
+#   name: asynchronous action and polling
+#   hosts: vm1
+#   become: yes
+#   tasks:
+#     -
+#       name: sleeping for 60 seconds, checking at 30th seconds using poll
+#       command: sleep 30
+#       async: 10
+#       poll: 5
+
+# 2.
+-
+  name: asynchronous action and polling
+  hosts: vm1
+  become: yes
+  tasks:
+    -
+      name: sleeping for 60 seconds, checking at 30th seconds using poll
+      command: sleep 30
+      async: 40
+      poll: 5

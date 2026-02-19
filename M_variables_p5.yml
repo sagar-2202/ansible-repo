@@ -1,0 +1,13 @@
+-
+  name: first_playbook
+  hosts: vm1
+  become: yes
+  vars:
+    servicename: nginx
+    status: stopped
+  tasks:
+    -
+      name: using variables
+      service:
+        name: "{{ servicename }}"
+        state: "{{ status }}"

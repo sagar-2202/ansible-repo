@@ -1,0 +1,16 @@
+-
+  name: first_playbook
+  hosts: vm1
+  become: yes
+  tasks:
+    # -
+    #   name: install service (apt)
+    #   apt:
+    #       name: nginx
+    #       state: present
+    #       update_cache: yes
+    -
+      name: "service module"
+      service:
+          name: nginx
+          state: started

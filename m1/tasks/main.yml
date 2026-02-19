@@ -1,0 +1,6 @@
+#SPDX-License-Identifier: MIT-0
+---
+# tasks file for m1
+-
+  name: create files in /tmp/m1 folder
+  command: touch /tmp/m1.txt

@@ -1,0 +1,18 @@
+-
+  name: first_playbook
+  hosts: vm1
+  become: yes
+  tasks:
+    # -
+    #   name: user module
+    #   user:
+    #       name: nginx_app_user
+    #       state: present
+    #       shell: /bin/bash
+    #       groups: docker
+    -
+      name: user module (removing)
+      user:
+        name: nginx_app_user
+        state: absent
+        remove: yes
